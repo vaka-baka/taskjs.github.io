@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" class>
+<body>
+<h1>Javatask</h1>
+<h2>1:</h2>
+<p id="task1"></p>
+<h2>2:</h2>
+<p id="task2"></p>
+<h2>3:</h2>
+<p id="task3"></p>
+<h2>4:</h2>
+<p id="task4"></p>
+<h2>5:</h2>
+<p id="task5"></p>
+<script>
+    var myObj = {
+        Name : "Dima",
+        age       : 34,
+        HairColor  : "Brown"
+    };
+
+    document.getElementById("task1").innerHTML =
+        "Name:" + "   " + myObj.Name + "<br>" +
+        "Age:" + "   " +  myObj.age + "<br>" +
+        "Hair color:" + "   " + myObj.HairColor + " .";
+</script>
+<script>
+    var myObj = {
+        Name : "Dima",
+        age       : 34,
+        HairColor  : "Brown"
+    };
+    myObj.backname = function()
+{
+return this.Name;
+}
+    document.getElementById("task2").innerHTML =  myObj.backname();
+</script>
+<script>
+    var MyArray = [1,2,3,4,5];
+    document.getElementById("task3").innerHTML =  MyArray;
+</script>
+<script>
+    var MyArray = [1,2,3,4,5];
+    const n = 5;
+    var x = "";
+    var i;
+    for (i = 0; i < n; i++) {
+        x += "MyArray" + "[" + MyArray[i] + "]"+"<br>";
+    }
+    document.getElementById("task4").innerHTML = x;
+
+</script>
+<script>
+   n2 = 100;
+    var MyArray = [n2];
+        for (var i = 1; i <= n2; i++) {
+            if (i % 5 !== 0 && i % 3 !== 0) {
+                x = "FizzBuzz";
+            } else if (i % 5 === 0) {
+                x = "Fizz";
+            } else if (i % 3 === 0) {
+                x = "Buzz";
+        }
+        document.write(x + "<br>");
+    }
+
+</script>
+</body>
+</html>
